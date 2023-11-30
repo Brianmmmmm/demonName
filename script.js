@@ -1,18 +1,22 @@
 // script.js
 window.onload = function() {
-    // Your long JavaScript code here
-    // ...
-    let testName = demonName.generateName();
-    let A = GameMath.randomInteger(0,DEMON_DOMAINS.length-1);
-    let B = GameMath.randomInteger(0,DEMON_DOMAINS.length-1);
-    let C = GameMath.randomInteger(0,DEMON_DOMAINS.length-1);
-    let testTitle = demonName.generateTitle([A,B,C],[HE,SHE,THEY,IT]);
-    let fullName = testName + ", the " + testTitle + "!";
-    document.getElementById("god-line").innerHTML = fullName;
+    let godLine = "";
+    for (i = 0; i < 100; i++) {
+        let testName = demonName.generateName();
+        let A = GameMath.randomInteger(0,DEMON_DOMAINS.length-1);
+        let B = GameMath.randomInteger(0,DEMON_DOMAINS.length-1);
+        let C = GameMath.randomInteger(0,DEMON_DOMAINS.length-1);
+        let testTitle = demonName.generateTitle([A,B,C],[HE,SHE,THEY,IT]);
+        let fullName = testName + ", the " + testTitle + "!";
+        godLine = godLine + fullName + "\n";
+    }
+    document.getElementById("god-line").innerHTML = godLine;
 
     let colorLine = WorldTextGenerator.generateColorString();
     colorLine = "The " + colorLine + " portal opens, revealing:";
     document.getElementById("color-line").innerHTML = colorLine;
+    //A = DEMON_DOMAINS.name
+    //let domainsLine = GameString.their(THEY,true) + " domains include: "
 };
 
 var demonName = {};
