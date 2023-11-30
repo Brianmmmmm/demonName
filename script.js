@@ -8,7 +8,7 @@ window.onload = function() {
         let C = GameMath.randomInteger(0,DEMON_DOMAINS.length-1);
         let testTitle = demonName.generateTitle([A,B,C],[HE,SHE,THEY,IT]);
         let fullName = testName + ", the " + testTitle + "!";
-        godLine = godLine + fullName + "\n";
+        godLine = godLine + fullName + "<br>";
     }
     document.getElementById("god-line").innerHTML = godLine;
 
