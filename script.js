@@ -457,7 +457,7 @@ demonName.generateWord = function (syllableCount) {
     // Chance of starting with a classic demon prefix, rather than randomly generating phonemes
     if (Math.random() < 0.05) {
         let classicArray = demonName.classicStartsConsonant;
-        if (startWithVowel = true) {
+        if (startWithVowel) {
             classicArray = demonName.classicStartsVowel;
         }
         let n = Math.floor(Math.random() * classicArray.length);
