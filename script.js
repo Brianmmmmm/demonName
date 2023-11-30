@@ -11,7 +11,7 @@ window.onload = function() {
     document.getElementById("god-line").innerHTML = fullName;
 
     let colorLine = WorldTextGenerator.generateColorString();
-    colorLine = "Behold! The " + colorLine + " portal opens, revealing your new master!";
+    colorLine = "The " + colorLine + " portal opens, revealing:";
     document.getElementById("color-line").innerHTML = colorLine;
 };
 
